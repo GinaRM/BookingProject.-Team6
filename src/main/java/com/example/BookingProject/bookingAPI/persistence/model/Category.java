@@ -7,8 +7,6 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
-@Getter
 @Builder
 @Entity
 @Table(name = "Category_tbl")
