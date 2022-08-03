@@ -1,15 +1,14 @@
-package com.example.BookingProject.model;
+package com.example.BookingProject.bookingAPI.persistence.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
+@Getter
 @Builder
 @Entity
 @Table(name = "Category_tbl")

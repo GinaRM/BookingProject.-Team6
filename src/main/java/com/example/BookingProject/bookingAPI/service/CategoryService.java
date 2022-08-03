@@ -1,6 +1,6 @@
-package com.example.BookingProject.service;
+package com.example.BookingProject.bookingAPI.service;
 
-import com.example.BookingProject.model.Category;
+import com.example.BookingProject.bookingAPI.persistence.model.Category;
 
 import java.util.List;
 

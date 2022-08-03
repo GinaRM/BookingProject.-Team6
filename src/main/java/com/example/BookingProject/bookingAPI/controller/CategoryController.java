@@ -1,7 +1,7 @@
-package com.example.BookingProject.controller;
+package com.example.BookingProject.bookingAPI.controller;
 
-import com.example.BookingProject.model.Category;
-import com.example.BookingProject.service.CategoryService;
+import com.example.BookingProject.bookingAPI.persistence.model.Category;
+import com.example.BookingProject.bookingAPI.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class CategoryController {
     }
 
     @PostMapping("/addMany")
-    public ResponseEntity<?> addCategory(@RequestBody List<Category> categories) {
+    public ResponseEntity<?> addCategories(@RequestBody List<Category> categories) {
         return new ResponseEntity<>(categoryService.saveCategories(categories), HttpStatus.CREATED);
     }
     @GetMapping
@@ -30,7 +30,7 @@ public class CategoryController {
     }
 
     @GetMapping("/{title}")
-    public ResponseEntity<?> findCategoryByTile(@PathVariable String title) {
+    public ResponseEntity<?> findCategoryByTitle(@PathVariable String title) {
         return new ResponseEntity<>(categoryService.getCategoryByTitle(title), HttpStatus.OK);
     }
 
